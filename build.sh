@@ -17,5 +17,5 @@ set -e
 # Install test dependencies
 # Create a custom config file
 pyenv global 3.6.1
-sudo pip install git+https://github.com/ansible-community/ansible-lint.git
-sudo pip install ansible molecule yamllint
+pip3 install git+https://github.com/ansible-community/ansible-lint.git
+sudo pip3 install ansible molecule yamllint
