@@ -13,34 +13,5 @@ set -e
 # set -x
 
 # Install test dependencies
-pip3 install ansible molecule[docker] docker yamllint ansible-lint
+sudo pip install ansible molecule yamllint ansible-lint
 # Create a custom config file
-echo "# Sample custom config" > ~/custom_config.conf
-# Create an addional config directory
-mkdir ~/plugins; touch ~/plugins/custom_config.conf
-for i in {"install_agent", "uninstall_agent"}
-do
-  for j in {"monitoring", "logging", "ops-agent"}
-  do
-    if (j == "monitoring")
-    then
-      for k in {"latest", "6.*.*", "6.1.0"}
-      do
-        AGENT_TYPE=j; VERSION=k; MAIN_CONFIG_FILE='~/custom_config.conf'; ADDITONAL_CONFIG_DIR='~/plugins/';  molecule test -s i
-      done
-    if (j == "logging")
-    then
-      for k in {"latest", "1.*.*", "1.7.0"}
-      do
-        AGENT_TYPE=j; VERSION=k; MAIN_CONFIG_FILE='~/custom_config.conf'; ADDITONAL_CONFIG_DIR='~/plugins/';  molecule test -s i
-      done
-    if (j == "ops-agent")
-    then
-      for k in {"latest", "1.*.*", "1.0.1"}
-      do
-        AGENT_TYPE=j; VERSION=k; MAIN_CONFIG_FILE='~/custom_config.conf'; ADDITONAL_CONFIG_DIR='~/plugins/';  molecule test -s i
-      done
-  done
-done
-
-
