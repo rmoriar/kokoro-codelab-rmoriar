@@ -12,6 +12,8 @@ set -e
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
 python --version
+python3 -c "import sys; print(sys.version)"
 # Install test dependencies
+sudo pip install --upgrade pip
 sudo python3 -m pip install ansible molecule yamllint "ansible-lint>=4.3.0"
 # Create a custom config file
