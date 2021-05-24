@@ -13,7 +13,7 @@ set -e
 # set -x
 python --version
 sudo apt update -y
-sudo apt install python3.7
+pyenv shell 3.6.1
 python3 -c "import sys; print(sys.version)"
 # Install test dependencies
 sudo pip install --upgrade pip
