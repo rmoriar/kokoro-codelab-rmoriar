@@ -12,9 +12,8 @@ set -e
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
 # sudo apt-get update -y
-pyenv global 3.6.1
-pip install git+https://github.com/ansible-community/ansible-lint.git
+#pyenv global 3.6.1
+#pip install git+https://github.com/ansible-community/ansible-lint.git
 # Install test dependencies
-sudo pip install --upgrade pip
-sudo pip3 install ansible molecule yamllint
+sudo pip3 install ansible molecule[lint]
 # Create a custom config file
