@@ -11,11 +11,9 @@ set -e
 #  Additionally, recursive invocation with credentials as command-line
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
-sudo apt-get install software-properties-common -y
-sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update -y
-sudo apt install python3.9 -y
+sudo apt install ansible-lint -y
 # Install test dependencies
 sudo pip install --upgrade pip
-sudo pip3 install ansible molecule yamllint "ansible-lint>=4.3.0"
+sudo pip3 install ansible molecule yamllint
 # Create a custom config file
