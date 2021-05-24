@@ -11,10 +11,7 @@ set -e
 #  Additionally, recursive invocation with credentials as command-line
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
-python --version
-sudo apt update -y
-pyenv shell 3.6.1
-python3 -c "import sys; print(sys.version)"
+pyenv global 3.6.1
 # Install test dependencies
 sudo pip install --upgrade pip
 sudo python3 -m pip install ansible molecule yamllint "ansible-lint>=4.3.0"
