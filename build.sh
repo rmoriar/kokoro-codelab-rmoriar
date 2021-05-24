@@ -11,7 +11,7 @@ set -e
 #  Additionally, recursive invocation with credentials as command-line
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
-
+sudo echo python --version
 # Install test dependencies
 sudo pip install --upgrade pip
 sudo pip install ansible molecule yamllint "ansible-lint>=4.3.0"
