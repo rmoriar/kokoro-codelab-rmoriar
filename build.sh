@@ -13,6 +13,5 @@ set -e
 # set -x
 python --version
 # Install test dependencies
-sudo pip install --upgrade pip
-sudo pip install ansible molecule yamllint "ansible-lint>=4.3.0"
+sudo python3 -m pip install ansible molecule yamllint "ansible-lint>=4.3.0"
 # Create a custom config file
