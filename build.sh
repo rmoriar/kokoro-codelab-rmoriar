@@ -18,4 +18,4 @@ set -e
 # Create a custom config file
 pyenv global 3.6.1
 pip install git+https://github.com/ansible-community/ansible-lint.git
-sudo pip333 install ansible molecule yamllint
+sudo pip install ansible molecule yamllint
